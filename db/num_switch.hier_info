@@ -1,0 +1,106 @@
+|num_switch
+result <= <GND>
+DE1 <= <GND>
+DE2 <= <GND>
+DE3 <= <GND>
+pin_name2 <= <GND>
+pin_name3 <= <GND>
+pin_name4 <= <GND>
+pin_name5 <= <GND>
+pin_name6 <= <GND>
+pin_name7 <= <GND>
+pin_name8 <= <GND>
+pin_name9 <= <GND>
+test_output[0] <= compare_to_register:inst.test_output[0]
+test_output[1] <= compare_to_register:inst.test_output[1]
+test_output[2] <= compare_to_register:inst.test_output[2]
+clk => clk_gen:inst4.clock
+object[0] => compare_to_register:inst.object[0]
+object[1] => compare_to_register:inst.object[1]
+object[2] => compare_to_register:inst.object[2]
+
+
+|num_switch|compare_to_register:inst
+clk => test_output[0]~reg0.CLK
+clk => test_output[1]~reg0.CLK
+clk => test_output[2]~reg0.CLK
+clk => temp_num[0].CLK
+clk => temp_num[1].CLK
+clk => temp_num[2].CLK
+clk => result~reg0.CLK
+clk => temp_output[0].CLK
+clk => temp_output[1].CLK
+clk => temp_output[2].CLK
+object[0] => temp_output.IN1
+object[1] => temp_output.IN1
+object[2] => temp_output.IN1
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+test_output[0] <= test_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+test_output[1] <= test_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+test_output[2] <= test_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|num_switch|clk_gen:inst4
+1KHz <= div10_t:inst3.CLK_out
+clock => div10_t:inst.CLK
+100Hz <= div10_t:inst4.CLK_out
+10Hz <= div10_t:inst5.CLK_out
+1Hz <= div10_t:inst6.CLK_out
+
+
+|num_switch|clk_gen:inst4|div10_t:inst3
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst2
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst1
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst4
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst5
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|num_switch|clk_gen:inst4|div10_t:inst6
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
