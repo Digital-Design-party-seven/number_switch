@@ -14,15 +14,17 @@ end compare_to_register;
 architecture bruh of compare_to_register is 
 signal temp_output:std_logic_vector(2 downto 0);
 signal temp_num:std_logic_vector(2 downto 0);
+signal temp_result:std_logic;
 	begin
 		process(clk)
 		begin
 			if	clk'event and clk ='1' then 
 				temp_output <= not (object xor temp_num);
 				case temp_output is 
-					when "111"=>result<='1';
-					when others => result<='0';
+					when "111"=>temp_result<='1';
+					when others => temp_result<='0';
 				end case;
+				result<=temp_result;
 				temp_num <= temp_num + 1;
 				test_output <= temp_num;
 			end if;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for num_switch
-Fri May 29 14:25:15 2020
+Thu Jun 18 17:32:38 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,14 +41,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 29 14:25:15 2020      ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 18 17:32:38 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; num_switch                                 ;
 ; Top-level Entity Name           ; num_switch                                 ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 34                                         ;
-; Total pins                      ; 19                                         ;
+; Total registers                 ; 28                                         ;
+; Total pins                      ; 25                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -165,16 +165,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
-; num_switch.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.1/number_switch/num_switch.bdf          ;         ;
-; compare_to_register.vhd          ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/compare_to_register.vhd ;         ;
-; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/clk_gen.bdf             ;         ;
-; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/div10_t.bdf             ;         ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
+; num_switch.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.1/number_switch/num_switch.bdf     ;         ;
+; simple_compare.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/simple_compare.bdf ;         ;
+; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/clk_gen.bdf        ;         ;
+; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/div10_t.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -182,42 +182,42 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 17                            ;
+; Estimate of Logic utilization (ALMs needed) ; 15                            ;
 ;                                             ;                               ;
-; Combinational ALUT usage for logic          ; 31                            ;
+; Combinational ALUT usage for logic          ; 30                            ;
 ;     -- 7 input functions                    ; 0                             ;
 ;     -- 6 input functions                    ; 0                             ;
-;     -- 5 input functions                    ; 0                             ;
+;     -- 5 input functions                    ; 2                             ;
 ;     -- 4 input functions                    ; 7                             ;
-;     -- <=3 input functions                  ; 24                            ;
+;     -- <=3 input functions                  ; 21                            ;
 ;                                             ;                               ;
-; Dedicated logic registers                   ; 34                            ;
+; Dedicated logic registers                   ; 28                            ;
 ;                                             ;                               ;
-; I/O pins                                    ; 19                            ;
+; I/O pins                                    ; 25                            ;
 ; Total DSP Blocks                            ; 0                             ;
-; Maximum fan-out node                        ; clk_gen:inst4|div10_t:inst6|2 ;
-; Maximum fan-out                             ; 8                             ;
-; Total fan-out                               ; 173                           ;
-; Average fan-out                             ; 1.68                          ;
+; Maximum fan-out node                        ; clk_gen:inst4|div10_t:inst5|2 ;
+; Maximum fan-out                             ; 6                             ;
+; Total fan-out                               ; 169                           ;
+; Average fan-out                             ; 1.56                          ;
 +---------------------------------------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
-+-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
-; |num_switch                   ; 31 (0)            ; 34 (0)       ; 0                 ; 0          ; 19   ; 0            ; |num_switch                             ; work         ;
-;    |clk_gen:inst4|            ; 28 (0)            ; 28 (0)       ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4               ; work         ;
-;       |div10_t:inst1|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst1 ; work         ;
-;       |div10_t:inst2|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst2 ; work         ;
-;       |div10_t:inst3|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst3 ; work         ;
-;       |div10_t:inst4|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst4 ; work         ;
-;       |div10_t:inst5|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst5 ; work         ;
-;       |div10_t:inst6|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst6 ; work         ;
-;       |div10_t:inst|          ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst  ; work         ;
-;    |compare_to_register:inst| ; 3 (3)             ; 6 (6)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|compare_to_register:inst    ; work         ;
-+-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
+; |num_switch                ; 30 (0)            ; 28 (0)       ; 0                 ; 0          ; 25   ; 0            ; |num_switch                             ; work         ;
+;    |clk_gen:inst4|         ; 28 (0)            ; 28 (0)       ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4               ; work         ;
+;       |div10_t:inst1|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst1 ; work         ;
+;       |div10_t:inst2|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst2 ; work         ;
+;       |div10_t:inst3|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst3 ; work         ;
+;       |div10_t:inst4|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst4 ; work         ;
+;       |div10_t:inst5|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst5 ; work         ;
+;       |div10_t:inst6|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst6 ; work         ;
+;       |div10_t:inst|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst  ; work         ;
+;    |simple_compare:inst|   ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|simple_compare:inst         ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,7 +226,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 28    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -251,18 +251,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri May 29 14:25:13 2020
+    Info: Processing started: Thu Jun 18 17:32:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off num_switch -c num_switch
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file num_switch.bdf
     Info (12023): Found entity 1: num_switch
 Info (12127): Elaborating entity "num_switch" for the top level hierarchy
-Warning (275011): Block or symbol "compare_to_register" of instance "inst" overlaps another block or symbol
-Warning (275043): Pin "result" is missing source
-Warning (12125): Using design file compare_to_register.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: compare_to_register-bruh
-    Info (12023): Found entity 1: compare_to_register
-Info (12128): Elaborating entity "compare_to_register" for hierarchy "compare_to_register:inst"
+Warning (12125): Using design file simple_compare.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: simple_compare
+Info (12128): Elaborating entity "simple_compare" for hierarchy "simple_compare:inst"
+Warning (275011): Block or symbol "AND8" of instance "inst" overlaps another block or symbol
 Warning (12125): Using design file clk_gen.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clk_gen
 Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:inst4"
@@ -270,7 +268,6 @@ Warning (12125): Using design file div10_t.bdf, which is not specified as a desi
     Info (12023): Found entity 1: div10_t
 Info (12128): Elaborating entity "div10_t" for hierarchy "clk_gen:inst4|div10_t:inst3"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result" is stuck at GND
     Warning (13410): Pin "DE1" is stuck at GND
     Warning (13410): Pin "DE2" is stuck at GND
     Warning (13410): Pin "DE3" is stuck at GND
@@ -282,21 +279,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pin_name7" is stuck at GND
     Warning (13410): Pin "pin_name8" is stuck at GND
     Warning (13410): Pin "pin_name9" is stuck at GND
+    Warning (13410): Pin "pin_name10" is stuck at VCC
+    Warning (13410): Pin "pin_name18" is stuck at GND
+    Warning (13410): Pin "pin_name19" is stuck at GND
+    Warning (13410): Pin "pin_name20" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "object[2]"
-    Warning (15610): No output dependent on input pin "object[1]"
-    Warning (15610): No output dependent on input pin "object[0]"
-Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 34 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 614 megabytes
-    Info: Processing ended: Fri May 29 14:25:15 2020
-    Info: Elapsed time: 00:00:02
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 30 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 575 megabytes
+    Info: Processing ended: Thu Jun 18 17:32:38 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

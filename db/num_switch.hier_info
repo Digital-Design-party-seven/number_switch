@@ -1,5 +1,14 @@
 |num_switch
-result <= <GND>
+result <= simple_compare:inst.OUT
+clk => clk_gen:inst4.clock
+pin_name1 => simple_compare:inst.pin_name1
+pin_name11 => simple_compare:inst.pin_name2
+pin_name12 => simple_compare:inst.pin_name3
+pin_name13 => simple_compare:inst.pin_name4
+pin_name14 => simple_compare:inst.pin_name5
+pin_name15 => simple_compare:inst.pin_name6
+pin_name16 => simple_compare:inst.pin_name7
+pin_name17 => simple_compare:inst.pin_name8
 DE1 <= <GND>
 DE2 <= <GND>
 DE3 <= <GND>
@@ -11,33 +20,23 @@ pin_name6 <= <GND>
 pin_name7 <= <GND>
 pin_name8 <= <GND>
 pin_name9 <= <GND>
-test_output[0] <= compare_to_register:inst.test_output[0]
-test_output[1] <= compare_to_register:inst.test_output[1]
-test_output[2] <= compare_to_register:inst.test_output[2]
-clk => clk_gen:inst4.clock
-object[0] => compare_to_register:inst.object[0]
-object[1] => compare_to_register:inst.object[1]
-object[2] => compare_to_register:inst.object[2]
+pin_name10 <= <VCC>
+pin_name18 <= <GND>
+pin_name19 <= <GND>
+pin_name20 <= <GND>
 
 
-|num_switch|compare_to_register:inst
-clk => test_output[0]~reg0.CLK
-clk => test_output[1]~reg0.CLK
-clk => test_output[2]~reg0.CLK
-clk => temp_num[0].CLK
-clk => temp_num[1].CLK
-clk => temp_num[2].CLK
-clk => result~reg0.CLK
-clk => temp_output[0].CLK
-clk => temp_output[1].CLK
-clk => temp_output[2].CLK
-object[0] => temp_output.IN1
-object[1] => temp_output.IN1
-object[2] => temp_output.IN1
-result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
-test_output[0] <= test_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-test_output[1] <= test_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-test_output[2] <= test_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|num_switch|simple_compare:inst
+OUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.IN0
+pin_name1 => inst.IN0
+pin_name3 => inst.IN1
+pin_name2 => inst.IN2
+pin_name4 => inst.IN3
+pin_name7 => inst.IN4
+pin_name6 => inst.IN5
+pin_name8 => inst.IN6
+pin_name5 => inst.IN7
 
 
 |num_switch|clk_gen:inst4
