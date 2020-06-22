@@ -1,3 +1,7 @@
 Quartus_Version = Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Version_Index = 318808576
-Creation_Time = Thu Jun 18 18:11:26 2020
+<<<<<<< HEAD
+Creation_Time = Mon Jun 22 17:06:34 2020
+=======
+Creation_Time = Mon Jun 22 16:11:05 2020
+>>>>>>> 0f0d90732b72f02c20444ff047111863c6910a70
