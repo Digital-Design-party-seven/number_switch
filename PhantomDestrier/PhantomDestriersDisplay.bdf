@@ -165,7 +165,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 352 40 528 56)
+	(rect 432 40 608 56)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "y[3..0]" (rect 90 0 123 12)(font "Arial" ))
 	(pt 0 8)
@@ -193,35 +193,6 @@ applicable agreement for further details.
 		(line (pt 78 4)(pt 82 8))
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
-	)
-)
-(symbol
-	(rect 176 16 328 96)
-	(text "Counter" (rect 5 0 43 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "x[3..0]" (rect 0 0 31 12)(font "Arial" ))
-		(text "x[3..0]" (rect 21 43 52 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "y[3..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "y[3..0]" (rect 104 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
 	)
 )
 (symbol
@@ -331,28 +302,27 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 184 64))
 	)
 )
-(connector
-	(pt 144 48)
-	(pt 176 48)
-)
-(connector
-	(pt 144 104)
-	(pt 144 48)
-)
-(connector
-	(pt 336 8)
-	(pt 168 8)
-	(bus)
-)
-(connector
-	(pt 168 8)
-	(pt 168 64)
-	(bus)
-)
-(connector
-	(pt 168 64)
-	(pt 176 64)
-	(bus)
+(symbol
+	(rect 176 0 312 80)
+	(text "NewCounter" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "y[3..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "y[3..0]" (rect 88 27 121 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 64))
+	)
 )
 (connector
 	(pt 312 104)
@@ -378,6 +348,29 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(pt 592 104)
+	(pt 576 104)
+	(bus)
+)
+(connector
+	(pt 336 48)
+	(pt 432 48)
+	(bus)
+)
+(connector
+	(pt 144 32)
+	(pt 176 32)
+)
+(connector
+	(pt 144 104)
+	(pt 144 32)
+)
+(connector
+	(pt 336 32)
+	(pt 312 32)
+	(bus)
+)
+(connector
 	(pt 112 104)
 	(pt 144 104)
 )
@@ -386,22 +379,7 @@ applicable agreement for further details.
 	(pt 312 104)
 )
 (connector
-	(pt 592 104)
-	(pt 576 104)
-	(bus)
-)
-(connector
-	(pt 328 48)
-	(pt 336 48)
-	(bus)
-)
-(connector
-	(pt 336 48)
-	(pt 352 48)
-	(bus)
-)
-(connector
-	(pt 336 8)
+	(pt 336 32)
 	(pt 336 48)
 	(bus)
 )
