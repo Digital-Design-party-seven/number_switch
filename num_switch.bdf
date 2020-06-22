@@ -890,7 +890,7 @@ applicable agreement for further details.
 (symbol
 	(rect 560 248 728 440)
 	(text "PhantomDestriersDisplay" (rect 5 0 146 14)(font "Arial" (font_size 8)))
-	(text "inst9" (rect 8 176 31 188)(font "Arial" ))
+	(text "inst6" (rect 8 176 31 188)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
