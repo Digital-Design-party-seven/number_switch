@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.1"))
 (symbol
 	(rect 16 16 192 224)
-	(text "JudgeOrder" (rect 5 0 52 12)(font "Arial" ))
+	(text "NewJudge" (rect 5 0 46 12)(font "Arial" ))
 	(text "inst" (rect 8 192 20 204)(font "Arial" ))
 	(port
 		(pt 0 32)
