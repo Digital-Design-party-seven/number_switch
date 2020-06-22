@@ -1,0 +1,1 @@
+Components include OrderJuding, Display on the 7 segment, and Clock.
