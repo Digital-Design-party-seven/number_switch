@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 56 144 224 160)
+	(rect 8 176 176 192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "x" (rect 5 0 10 12)(font "Arial" ))
 	(pt 168 8)
@@ -51,7 +51,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 0 160 56 176))
+	(annotation_block (location)(rect -48 192 8 208))
 )
 (pin
 	(output)
@@ -1437,8 +1437,16 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(pt 184 152)
+	(pt 184 184)
+)
+(connector
+	(pt 184 184)
+	(pt 176 184)
+)
+(connector
+	(pt 184 152)
 	(pt 328 152)
-	(pt 224 152)
 )
 (junction (pt 848 136))
 (junction (pt 272 104))
