@@ -1,5 +1,5 @@
 Analysis & Synthesis report for num_switch
-Tue Jun 23 12:58:20 2020
+Mon Jun 22 20:44:01 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,9 +14,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +43,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 23 12:58:20 2020      ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 22 20:44:01 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; num_switch                                 ;
 ; Top-level Entity Name           ; num_switch                                 ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 30                                         ;
+; Total registers                 ; 19                                         ;
 ; Total pins                      ; 49                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
@@ -167,20 +168,27 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
-; num_switch.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.1/number_switch/num_switch.bdf     ;         ;
-; simple_compare.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/simple_compare.bdf ;         ;
-; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/clk_gen.bdf        ;         ;
-; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/div10_t.bdf        ;         ;
-; 88led.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/88led.bdf          ;         ;
-; rrrrrrr.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/rrrrrrr.vhd        ;         ;
-; dd.vhd                           ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/dd.vhd             ;         ;
-; qweeer.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/qweeer.vhd         ;         ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+---------+
+; num_switch.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.1/number_switch/num_switch.bdf              ;         ;
+; bus_num_compare.vhd              ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/bus_num_compare.vhd         ;         ;
+; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/clk_gen.bdf                 ;         ;
+; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/div10_t.bdf                 ;         ;
+; switchnum.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/switchnum.bdf               ;         ;
+; change.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/change.vhd                  ;         ;
+; onoff.vhd                        ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/onoff.vhd                   ;         ;
+; phantomdestriersdisplay.bdf      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/phantomdestriersdisplay.bdf ;         ;
+; display.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/display.vhd                 ;         ;
+; newjudge.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/newjudge.vhd                ;         ;
+; newcounter.vhd                   ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/newcounter.vhd              ;         ;
+; 88led.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.1/number_switch/88led.bdf                   ;         ;
+; rrrrrrr.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/rrrrrrr.vhd                 ;         ;
+; dd.vhd                           ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/dd.vhd                      ;         ;
+; qweeer.vhd                       ; yes             ; Auto-Found VHDL File                     ; C:/altera/13.1/number_switch/qweeer.vhd                  ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -188,23 +196,23 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 27                          ;
+; Estimate of Logic utilization (ALMs needed) ; 11                          ;
 ;                                             ;                             ;
-; Combinational ALUT usage for logic          ; 44                          ;
+; Combinational ALUT usage for logic          ; 22                          ;
 ;     -- 7 input functions                    ; 0                           ;
-;     -- 6 input functions                    ; 9                           ;
+;     -- 6 input functions                    ; 0                           ;
 ;     -- 5 input functions                    ; 0                           ;
-;     -- 4 input functions                    ; 7                           ;
-;     -- <=3 input functions                  ; 28                          ;
+;     -- 4 input functions                    ; 4                           ;
+;     -- <=3 input functions                  ; 18                          ;
 ;                                             ;                             ;
-; Dedicated logic registers                   ; 30                          ;
+; Dedicated logic registers                   ; 19                          ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 49                          ;
 ; Total DSP Blocks                            ; 0                           ;
 ; Maximum fan-out node                        ; 88LED:inst5|DD:inst10|qn[0] ;
-; Maximum fan-out                             ; 17                          ;
-; Total fan-out                               ; 275                         ;
-; Average fan-out                             ; 1.60                        ;
+; Maximum fan-out                             ; 6                           ;
+; Total fan-out                               ; 153                         ;
+; Average fan-out                             ; 1.10                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -213,37 +221,76 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
-; |num_switch                ; 44 (0)            ; 30 (0)       ; 0                 ; 0          ; 49   ; 0            ; |num_switch                             ; work         ;
-;    |88LED:inst5|           ; 14 (8)            ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5                 ; work         ;
+; |num_switch                ; 22 (0)            ; 19 (0)       ; 0                 ; 0          ; 49   ; 0            ; |num_switch                             ; work         ;
+;    |88LED:inst5|           ; 6 (0)             ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5                 ; work         ;
 ;       |DD:inst10|          ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5|DD:inst10       ; work         ;
-;       |RRRRRRR:inst1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5|RRRRRRR:inst1   ; work         ;
-;       |qweeer:inst2|       ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5|qweeer:inst2    ; work         ;
-;    |clk_gen:inst4|         ; 27 (0)            ; 27 (0)       ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4               ; work         ;
+;       |qweeer:inst2|       ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|88LED:inst5|qweeer:inst2    ; work         ;
+;    |clk_gen:inst4|         ; 16 (0)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4               ; work         ;
 ;       |div10_t:inst1|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst1 ; work         ;
 ;       |div10_t:inst2|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst2 ; work         ;
 ;       |div10_t:inst3|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst3 ; work         ;
-;       |div10_t:inst4|      ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst4 ; work         ;
-;       |div10_t:inst5|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst5 ; work         ;
-;       |div10_t:inst6|      ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst6 ; work         ;
 ;       |div10_t:inst|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|clk_gen:inst4|div10_t:inst  ; work         ;
-;    |simple_compare:inst|   ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |num_switch|simple_compare:inst         ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+---------------------------------------+-----------------------------------------+
-; Register name                         ; Reason for Removal                      ;
-+---------------------------------------+-----------------------------------------+
-; 88LED:inst5|DD:inst9|qn[2]            ; Merged with 88LED:inst5|DD:inst10|qn[2] ;
-; 88LED:inst5|DD:inst9|qn[1]            ; Merged with 88LED:inst5|DD:inst10|qn[1] ;
-; 88LED:inst5|DD:inst9|qn[0]            ; Merged with 88LED:inst5|DD:inst10|qn[0] ;
-; 88LED:inst5|DD:inst9|qn[3]            ; Merged with 88LED:inst5|DD:inst10|qn[3] ;
-; clk_gen:inst4|div10_t:inst4|5         ; Merged with 88LED:inst5|DD:inst10|qn[0] ;
-; 88LED:inst5|DD:inst10|qn[3]           ; Lost fanout                             ;
-; Total Number of Removed Registers = 6 ;                                         ;
-+---------------------------------------+-----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++-----------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                             ; Reason for Removal                                               ;
++-----------------------------------------------------------+------------------------------------------------------------------+
+; 88LED:inst5|DD:inst9|qn[2]                                ; Merged with 88LED:inst5|DD:inst10|qn[2]                          ;
+; 88LED:inst5|DD:inst9|qn[1]                                ; Merged with 88LED:inst5|DD:inst10|qn[1]                          ;
+; 88LED:inst5|DD:inst9|qn[0]                                ; Merged with 88LED:inst5|DD:inst10|qn[0]                          ;
+; PhantomDestriersDisplay:inst6|NewJudge:inst3|temp[1..3]   ; Merged with PhantomDestriersDisplay:inst6|NewJudge:inst3|temp[0] ;
+; SwitchNum:inst8|Change:inst1|y[1..3]                      ; Merged with SwitchNum:inst8|Change:inst1|y[0]                    ;
+; SwitchNum:inst8|Change:inst8|y[0..3]                      ; Merged with SwitchNum:inst8|Change:inst1|y[0]                    ;
+; SwitchNum:inst8|Change:inst2|y[1..3]                      ; Merged with SwitchNum:inst8|Change:inst2|y[0]                    ;
+; SwitchNum:inst8|Change:inst7|y[0..3]                      ; Merged with SwitchNum:inst8|Change:inst2|y[0]                    ;
+; SwitchNum:inst8|Change:inst3|y[1..3]                      ; Merged with SwitchNum:inst8|Change:inst3|y[0]                    ;
+; SwitchNum:inst8|Change:inst6|y[0..3]                      ; Merged with SwitchNum:inst8|Change:inst3|y[0]                    ;
+; SwitchNum:inst8|Change:inst4|y[1..3]                      ; Merged with SwitchNum:inst8|Change:inst4|y[0]                    ;
+; SwitchNum:inst8|Change:inst5|y[0..3]                      ; Merged with SwitchNum:inst8|Change:inst4|y[0]                    ;
+; 88LED:inst5|DD:inst9|qn[3]                                ; Merged with 88LED:inst5|DD:inst10|qn[3]                          ;
+; PhantomDestriersDisplay:inst6|NewJudge:inst3|temp[0]      ; Lost fanout                                                      ;
+; bus_num_compare:inst|temp                                 ; Stuck at GND due to stuck port data_in                           ;
+; clk_gen:inst4|div10_t:inst4|5                             ; Merged with 88LED:inst5|DD:inst10|qn[0]                          ;
+; PhantomDestriersDisplay:inst6|NewCounter:inst2|temp[0..3] ; Lost fanout                                                      ;
+; SwitchNum:inst8|Change:inst4|y[0]                         ; Lost fanout                                                      ;
+; SwitchNum:inst8|Change:inst3|y[0]                         ; Lost fanout                                                      ;
+; SwitchNum:inst8|Change:inst2|y[0]                         ; Lost fanout                                                      ;
+; SwitchNum:inst8|Change:inst1|y[0]                         ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst6|2                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst6|5                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst6|3                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst6|1                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst5|2                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst5|5                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst5|3                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst5|1                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst4|2                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst4|3                             ; Lost fanout                                                      ;
+; clk_gen:inst4|div10_t:inst4|1                             ; Lost fanout                                                      ;
+; 88LED:inst5|DD:inst10|qn[3]                               ; Lost fanout                                                      ;
+; Total Number of Removed Registers = 58                    ;                                                                  ;
++-----------------------------------------------------------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++--------------------------------------------------------+--------------------+-----------------------------------------------------------------------+
+; Register name                                          ; Reason for Removal ; Registers Removed due to This Register                                ;
++--------------------------------------------------------+--------------------+-----------------------------------------------------------------------+
+; PhantomDestriersDisplay:inst6|NewJudge:inst3|temp[0]   ; Lost Fanouts       ; SwitchNum:inst8|Change:inst4|y[0], SwitchNum:inst8|Change:inst3|y[0], ;
+;                                                        ;                    ; SwitchNum:inst8|Change:inst2|y[0], SwitchNum:inst8|Change:inst1|y[0], ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst6|2, clk_gen:inst4|div10_t:inst6|5,         ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst6|3, clk_gen:inst4|div10_t:inst6|1,         ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst5|2, clk_gen:inst4|div10_t:inst5|5,         ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst5|3, clk_gen:inst4|div10_t:inst5|1,         ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst4|2, clk_gen:inst4|div10_t:inst4|3,         ;
+;                                                        ;                    ; clk_gen:inst4|div10_t:inst4|1                                         ;
+; PhantomDestriersDisplay:inst6|NewCounter:inst2|temp[0] ; Lost Fanouts       ; PhantomDestriersDisplay:inst6|NewCounter:inst2|temp[3]                ;
++--------------------------------------------------------+--------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -251,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -276,22 +323,77 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jun 23 12:58:18 2020
+    Info: Processing started: Mon Jun 22 20:43:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off num_switch -c num_switch
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file num_switch.bdf
     Info (12023): Found entity 1: num_switch
 Info (12127): Elaborating entity "num_switch" for the top level hierarchy
-Warning (12125): Using design file simple_compare.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: simple_compare
-Info (12128): Elaborating entity "simple_compare" for hierarchy "simple_compare:inst"
-Warning (275011): Block or symbol "AND8" of instance "inst" overlaps another block or symbol
+Warning (275083): Bus "y1[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275083): Bus "y2[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275083): Bus "y3[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "y" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y[3..0]" to "y3..0"
+Warning (275080): Converted elements in bus name "y1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y1[3..0]" to "y13..0"
+Warning (275080): Converted elements in bus name "y2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y2[3..0]" to "y23..0"
+Warning (275080): Converted elements in bus name "y3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y3[3..0]" to "y33..0"
+Warning (12125): Using design file bus_num_compare.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: bus_num_compare-bruh
+    Info (12023): Found entity 1: bus_num_compare
+Info (12128): Elaborating entity "bus_num_compare" for hierarchy "bus_num_compare:inst"
+Warning (10492): VHDL Process Statement warning at bus_num_compare.vhd(27): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file clk_gen.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clk_gen
 Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:inst4"
 Warning (12125): Using design file div10_t.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: div10_t
 Info (12128): Elaborating entity "div10_t" for hierarchy "clk_gen:inst4|div10_t:inst3"
+Warning (12125): Using design file switchnum.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SwitchNum
+Info (12128): Elaborating entity "SwitchNum" for hierarchy "SwitchNum:inst8"
+Warning (275083): Bus "y1[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275083): Bus "y2[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275083): Bus "y3[3..0]" found using same base name as "y", which might lead to a name conflict.
+Warning (275011): Block or symbol "Change" of instance "inst1" overlaps another block or symbol
+Warning (275011): Block or symbol "Change" of instance "inst3" overlaps another block or symbol
+Warning (275011): Block or symbol "Change" of instance "inst5" overlaps another block or symbol
+Warning (275011): Block or symbol "Change" of instance "inst7" overlaps another block or symbol
+Warning (275080): Converted elements in bus name "y" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y[3..0]" to "y3..0"
+Warning (275080): Converted elements in bus name "y1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y1[3..0]" to "y13..0"
+Warning (275080): Converted elements in bus name "y2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y2[3..0]" to "y23..0"
+Warning (275080): Converted elements in bus name "y3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "y3[3..0]" to "y33..0"
+Warning (12125): Using design file change.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Change-bruh
+    Info (12023): Found entity 1: Change
+Info (12128): Elaborating entity "Change" for hierarchy "SwitchNum:inst8|Change:inst1"
+Warning (12125): Using design file onoff.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: OnOff-bruh
+    Info (12023): Found entity 1: OnOff
+Info (12128): Elaborating entity "OnOff" for hierarchy "SwitchNum:inst8|OnOff:inst"
+Warning (12125): Using design file phantomdestriersdisplay.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: PhantomDestriersDisplay
+Info (12128): Elaborating entity "PhantomDestriersDisplay" for hierarchy "PhantomDestriersDisplay:inst6"
+Warning (275011): Block or symbol "Display" of instance "inst" overlaps another block or symbol
+Warning (12125): Using design file display.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Display-rtl
+    Info (12023): Found entity 1: Display
+Info (12128): Elaborating entity "Display" for hierarchy "PhantomDestriersDisplay:inst6|Display:inst"
+Warning (12125): Using design file newjudge.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: NewJudge-bruh
+    Info (12023): Found entity 1: NewJudge
+Info (12128): Elaborating entity "NewJudge" for hierarchy "PhantomDestriersDisplay:inst6|NewJudge:inst3"
+Warning (10492): VHDL Process Statement warning at newjudge.vhd(29): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file newcounter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: NewCounter-bruh
+    Info (12023): Found entity 1: NewCounter
+Info (12128): Elaborating entity "NewCounter" for hierarchy "PhantomDestriersDisplay:inst6|NewCounter:inst2"
 Warning (12125): Using design file 88led.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: 88LED
 Info (12128): Elaborating entity "88LED" for hierarchy "88LED:inst5"
@@ -308,6 +410,7 @@ Warning (12125): Using design file qweeer.vhd, which is not specified as a desig
     Info (12023): Found entity 1: qweeer
 Info (12128): Elaborating entity "qweeer" for hierarchy "88LED:inst5|qweeer:inst2"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "result" is stuck at GND
     Warning (13410): Pin "DE1" is stuck at GND
     Warning (13410): Pin "DE2" is stuck at GND
     Warning (13410): Pin "DE3" is stuck at GND
@@ -323,6 +426,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pin_name18" is stuck at GND
     Warning (13410): Pin "pin_name19" is stuck at GND
     Warning (13410): Pin "pin_name20" is stuck at GND
+    Warning (13410): Pin "r1" is stuck at GND
+    Warning (13410): Pin "r2" is stuck at GND
+    Warning (13410): Pin "r3" is stuck at GND
+    Warning (13410): Pin "r4" is stuck at GND
+    Warning (13410): Pin "r5" is stuck at GND
+    Warning (13410): Pin "r6" is stuck at GND
+    Warning (13410): Pin "r7" is stuck at GND
+    Warning (13410): Pin "r8" is stuck at GND
     Warning (13410): Pin "G[7]" is stuck at GND
     Warning (13410): Pin "G[6]" is stuck at GND
     Warning (13410): Pin "G[5]" is stuck at GND
@@ -331,17 +442,26 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "G[2]" is stuck at GND
     Warning (13410): Pin "G[1]" is stuck at GND
     Warning (13410): Pin "G[0]" is stuck at GND
+    Warning (13410): Pin "result_y[6]" is stuck at GND
+    Warning (13410): Pin "result_y[5]" is stuck at GND
+    Warning (13410): Pin "result_y[4]" is stuck at GND
+    Warning (13410): Pin "result_y[3]" is stuck at GND
+    Warning (13410): Pin "result_y[2]" is stuck at GND
+    Warning (13410): Pin "result_y[1]" is stuck at GND
+    Warning (13410): Pin "result_y[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 607 megabytes
-    Info: Processing ended: Tue Jun 23 12:58:20 2020
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "x"
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 47 output pins
+    Info (21061): Implemented 22 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 599 megabytes
+    Info: Processing ended: Mon Jun 22 20:44:01 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

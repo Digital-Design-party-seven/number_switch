@@ -1,5 +1,5 @@
 Assembler report for num_switch
-Tue Jun 23 12:58:52 2020
+Mon Jun 22 20:44:33 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 23 12:58:52 2020 ;
+; Assembler Status      ; Successful - Mon Jun 22 20:44:33 2020 ;
 ; Revision Name         ; num_switch                            ;
 ; Top-level Entity Name ; num_switch                            ;
 ; Family                ; Cyclone V                             ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                           ;
 +----------------+-------------------------------------------------------------------+
 ; Device         ; 5CEFA2F23C8                                                       ;
-; JTAG usercode  ; 0x004F0C28                                                        ;
-; Checksum       ; 0x004F0C28                                                        ;
+; JTAG usercode  ; 0x004E7720                                                        ;
+; Checksum       ; 0x004E7720                                                        ;
 +----------------+-------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jun 23 12:58:47 2020
+    Info: Processing started: Mon Jun 22 20:44:28 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off num_switch -c num_switch
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 620 megabytes
-    Info: Processing ended: Tue Jun 23 12:58:53 2020
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Mon Jun 22 20:44:33 2020
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 
